@@ -23,7 +23,6 @@ resource "google_compute_instance" "this" {
 
   metadata_startup_script = "sudo apt-get update; echo 'Hello World!' >> /home/${var.username}/startup"
 }
-<<<<<<< HEAD
 
 resource "google_compute_instance" "beta_this" {
   provider     = google-beta
@@ -50,5 +49,3 @@ resource "google_compute_instance" "beta_this" {
 
   metadata_startup_script = "sudo apt-get update; echo 'Hello World (Beta)!' >> /home/${var.username}/startup"
 }
-=======
->>>>>>> 866340354da49ef18ddc6f73ba38080f51c452a1
