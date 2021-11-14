@@ -3,9 +3,6 @@ Commands used:
 1. Use Application Default Credentials (ADC):
 `gcloud auth application-default login`
 
-1. Use Application Default Credentials (ADC):
-`gcloud auth application-default login`
-
 1. Create a new GCP Project:
 `gcloud projects create <PROJECT_ID>`
 
