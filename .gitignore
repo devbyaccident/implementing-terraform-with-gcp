@@ -33,6 +33,9 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+<<<<<<< HEAD
 
 # Don't commit secrets
 *svc-creds.json
+=======
+>>>>>>> 866340354da49ef18ddc6f73ba38080f51c452a1

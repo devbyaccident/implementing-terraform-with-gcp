@@ -1,11 +1,17 @@
 Commands used:
 
+<<<<<<< HEAD
 1. Use Application Default Credentials (ADC):
 `gcloud auth application-default login`
+=======
+1. Create a new GCP Project:
+`gcloud projects create <PROJECT_ID>`
+>>>>>>> 866340354da49ef18ddc6f73ba38080f51c452a1
 
 1. List all GCP Projects:
 `gcloud projects list`
 
+<<<<<<< HEAD
 1. Set active Project:
 `gcloud config set project <PROJECT_ID>`
 
@@ -30,3 +36,8 @@ gcloud iam service-accounts keys create prod-svc-creds.json --iam-account=prod-s
 
 1. Run Apply
 `terraform apply`
+=======
+1. Set project variable (Optional): 
+`export TF_VAR_<PROJECT_ID>`
+
+>>>>>>> 866340354da49ef18ddc6f73ba38080f51c452a1
