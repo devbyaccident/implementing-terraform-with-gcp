@@ -19,6 +19,9 @@ Commands used:
 1. Run init with backend config
 `terraform init -backend=true -backend-config=backend.config`
 
+1. Remove spaces and newlines from application default credentials.
+`cat ~/.config/gcloud/application_default_credentials.json | sed ':a;N;$!ba;s/\n/ /g' | sed 's/[[:space:]]//g'`
+
 1. Run Apply
 `terraform apply --auto-approve`
 
