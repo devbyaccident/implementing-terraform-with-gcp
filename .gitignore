@@ -36,3 +36,6 @@ terraform.rc
 
 # Don't commit secrets
 *svc-creds.json
+
+# Can't commit Pluralsight assets :(
+m4/content/static-site/*
