@@ -1,11 +1,9 @@
 resource "google_cloud_run_service" "default" {
-  name                       = "carved-rock-cloudrun-svc-${random_pet.suffix.id}"
+  name                       = "tf-moonfire-prod-cloudrun-svc-${random_pet.suffix.id}"
   location                   = "us-east1"
   autogenerate_revision_name = true
-
-  # Delete this part for demo
   depends_on = [
-    google_project_service.gcp_services
+    google_project_service.run,
   ]
 
   template {
@@ -27,8 +25,9 @@ resource "random_pet" "suffix" {
   length = 2
 }
 
-# Delete this part for demo
-resource "google_project_service" "gcp_services" {
-  project = "carved-rock-prod"
+# If enable API doesn't work fo the following described here:
+# https://cloud.google.com/endpoints/docs/openapi/enable-api
+resource "google_project_service" "run" {
+  project = "tf-moonfire-prod"
   service = "run.googleapis.com"
 }

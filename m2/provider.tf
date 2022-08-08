@@ -11,13 +11,13 @@ terraform {
 
 provider "google" {
   credentials = file("${path.module}/prod-svc-creds.json")
-  project     = "carved-rock-prod"
+  project     = "tf-moonfire-prod"
   region      = "us-east1"
   zone        = "us-east1-b"
 }
 
 provider "google-beta" {
-  project = "carved-rock-dev"
+  project = "tf-moonfire-dev"
   region  = "us-east1"
   zone    = "us-east1-b"
 }

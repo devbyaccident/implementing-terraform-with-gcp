@@ -1,0 +1,10 @@
+Setup
+
+SEtup application default credentials
+
+`gcloud auth application-default login`
+
+This will create a credential set under my config folder in my home dir.
+I copied it to the root dir of this repo so we can see it easier.
+
+Set up a service acc and get creds for it so we can impersonate it while we're calling terraform locally. (see README from m2/ dir)

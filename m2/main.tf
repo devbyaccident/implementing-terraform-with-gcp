@@ -1,12 +1,12 @@
 resource "google_compute_instance" "this" {
   provider     = google
-  name         = "carved-rock-instance"
+  name         = "tf-moonfire-prod-instance"
   machine_type = "e2-medium"
   zone         = "us-east1-b"
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-cloud/debian-10"
     }
   }
 
@@ -26,13 +26,13 @@ resource "google_compute_instance" "this" {
 
 resource "google_compute_instance" "beta_this" {
   provider     = google-beta
-  name         = "carved-rock-beta-instance"
+  name         = "tf-moonfire-beta-instance"
   machine_type = "e2-medium"
   zone         = "us-east1-b"
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-cloud/debian-10"
     }
   }
 
@@ -43,6 +43,7 @@ resource "google_compute_instance" "beta_this" {
     }
   }
 
+  # This takes a username var and looks for an ssh public key for the user.
   metadata = {
     ssh-keys = "${var.username}:${file("~/.ssh/id_rsa.pub")}"
   }
