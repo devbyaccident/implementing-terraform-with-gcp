@@ -6,3 +6,4 @@ Course repo for Implementing Terraform with Google Cloud Platform course at Plur
 1. Google Cloud Provider: 4.0.0
 1. Google Cloud Beta Provider: 4.0.0
 1. Google Cloud SDK: 363.0.0
+2. recommit
